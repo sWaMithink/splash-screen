@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen_app/IntroPage.dart';
+import 'package:splash_screen_app/splash_page.dart';
 
 main(){
   runApp(App());
@@ -8,19 +10,21 @@ class App extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(title: "flutter app",debugShowCheckedModeBanner: false,
       theme:ThemeData(primarySwatch: Colors.brown),
-      home: DashBoardScreen(),
+      home: SplashPage(),
     );
   }
 
 }
-class DashBoardScreen extends StatelessWidget{
+class MyHomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Dashboard'),
+          title: Text('Classico'),
         ),
-        body:
+        body:Container(
+          color: Colors.blue.shade200,
+        )
 
     );
   }
