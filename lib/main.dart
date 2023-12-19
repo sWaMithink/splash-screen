@@ -16,14 +16,19 @@ class App extends StatelessWidget{
 
 }
 class MyHomePage extends StatelessWidget{
+  var nameFromHome;
+  MyHomePage(this.nameFromHome);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text('Classico'),
         ),
-        body:Container(
-          color: Colors.blue.shade200,
+        body:Center(
+          child: Container(
+            color: Colors.blue.shade200,
+            child: Text("welcome,$nameFromHome",style: TextStyle(fontSize: 34,color: Colors.white),),
+          ),
         )
 
     );
